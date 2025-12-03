@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.header {
+    background: #003366;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.header-content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #003366;
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0px 2px 8px #ccc;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn-primary:hover {
+    background: #0052a3;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px #ccc;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.descricao-curta {
+    height: 50px;
+    overflow: hidden;
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: #0099cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn-secondary:hover {
+    background: #007fa3;
+}
+
+.title-page {
+    margin-bottom: 20px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+
+.detalhes-acao p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
