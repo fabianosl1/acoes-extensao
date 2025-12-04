@@ -4,7 +4,7 @@
 <main class="container">
     <h1>Cadastrar Nova Ação de Extensão</h1>
 
-    <form action="../cadastrar-acao" method="post" class="form-card">
+    <form action="acoes/cadastrar" method="post" class="form-card">
 
         <label>Título:</label>
         <input type="text" name="titulo" required>

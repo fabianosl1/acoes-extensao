@@ -5,7 +5,7 @@
     <h1 class="title-page">Ações de Extensão</h1>
 
     <c:if test="${not empty sessionScope.admin}">
-        <a href="${pageContext.request.contextPath}/admin/cadastrar-acao" class="btn-primary">
+        <a href="acoes/cadastrar" class="btn-primary">
             Cadastrar nova ação
         </a>
     </c:if>
@@ -24,7 +24,7 @@
                         <p><strong>Período:</strong> ${acao.dataInicio} — ${acao.dataFim}</p>
                         <p class="descricao-curta">${acao.descricao}</p>
 
-                        <a href="${pageContext.request.contextPath}/acao?id=${acao.id}" 
+                        <a href="acao?id=${acao.id}" 
                            class="btn-secondary">Ver detalhes</a>
                     </div>
                 </c:forEach>

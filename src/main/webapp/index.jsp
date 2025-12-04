@@ -5,11 +5,7 @@
     <section class="hero">
         <h1>Portal de Ações de Extensão - UFRRJ</h1>
         <p>Conheça os projetos, cursos, eventos e programas de extensão desenvolvidos pela universidade.</p>
-        <a href="${pageContext.request.contextPath}/acoes" class="btn-primary">Ver todas as ações</a>
-
-        <c:if test="${not empty sessionScope.admin}">
-            <a class="btn-secondary" href="${pageContext.request.contextPath}/admin/cadastrar-acao">Gerenciar ações</a>
-        </c:if>
+        <a href="acoes" class="btn-primary">Ver todas as ações</a>
     </section>
 
     <section class="cards">

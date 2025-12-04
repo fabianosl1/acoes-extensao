@@ -11,6 +11,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/login")
 public class LoginController extends HttpServlet  {
@@ -19,6 +20,14 @@ public class LoginController extends HttpServlet  {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        System.out.println(session.getAttribute("admin"));
+
+        if (session.getAttribute("admin") != null) {
+            response.sendRedirect(request.getContextPath() + "/inicio");
+            return;
+        }
+
         RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
         dispatcher.forward(request, response);
     }
@@ -35,7 +44,12 @@ public class LoginController extends HttpServlet  {
             return;
         }
 
-        response.sendRedirect(request.getContextPath() + "/acoes");
+        
+        HttpSession session = request.getSession();
+
+        session.setAttribute("admin", usuario);
+
+        response.sendRedirect(request.getContextPath() + "/inicio");
     }
 
 }
