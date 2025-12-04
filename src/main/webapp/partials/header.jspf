@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,20 +11,20 @@
 <header class="header">
     <div class="header-content">
         <h2 class="logo">Extensão UFRRJ</h2>
+
         <nav class="nav">
-            <a href="/inicio">Início</a>
-            <a href="/acoes">Ações</a>
+            <a href="${pageContext.request.contextPath}/index.jsp">Início</a>
+            <a href="${pageContext.request.contextPath}/acoes.jsp">Ações</a>
+
+            <c:choose>
+                <c:when test="${empty sessionScope.admin}">
+                    <a href="${pageContext.request.contextPath}/login.jsp">Login</a>
+                </c:when>
+                <c:otherwise>
+                    <a href="${pageContext.request.contextPath}/admin/cadastrar-acao">Cadastrar Ação</a>
+                    <a href="${pageContext.request.contextPath}/logout">Sair</a>
+                </c:otherwise>
+            </c:choose>
         </nav>
     </div>
-
-    <c:choose>
-    <c:when test="${empty sessionScope.admin}">
-        <a href="login.jsp">Login</a>
-    </c:when>
-    <c:otherwise>
-        <a href="admin/cadastrar-acao">Cadastrar Ação</a>
-        <a href="logout">Sair</a>
-    </c:otherwise>
-</c:choose>
-
 </header>
