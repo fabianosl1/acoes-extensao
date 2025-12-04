@@ -1,4 +1,4 @@
-package br.ufrrj.acoes.Controllers;
+package br.ufrrj.acoes.controllers;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;

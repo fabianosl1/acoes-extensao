@@ -11,7 +11,7 @@
         <class>br.ufrrj.acoes.models.Atividade</class>
         <class>br.ufrrj.acoes.models.RedeSocial</class>
         <class>br.ufrrj.acoes.models.Responsavel</class>
-
+        <class>br.ufrrj.acoes.models.Usuario</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>

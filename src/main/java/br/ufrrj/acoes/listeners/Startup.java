@@ -1,6 +1,6 @@
 package br.ufrrj.acoes.listeners;
 
-import br.ufrrj.acoes.Database.DatabaseManager;
+import br.ufrrj.acoes.database.DatabaseManager;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;

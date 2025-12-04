@@ -1,4 +1,4 @@
-package br.ufrrj.acoes.Database;
+package br.ufrrj.acoes.database;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
