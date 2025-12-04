@@ -1,5 +1,7 @@
 package br.ufrrj.acoes.repositories.jpa;
 
+import java.util.List;
+
 import br.ufrrj.acoes.database.DatabaseManager;
 import br.ufrrj.acoes.models.Atividade;
 import br.ufrrj.acoes.models.Responsavel;
@@ -60,6 +62,17 @@ public class AtividadeRepositoryJpa implements AtividadeRepository {
             em.persist(responsavel);
 
             return responsavel;
+        }
+    }
+
+    @Override
+    public List<Atividade> list() {
+        EntityManager em = DatabaseManager.getEntityManager();
+    
+        try {
+            return em.createQuery("SELECT a FROM Atividade a", Atividade.class).getResultList();
+        } finally {
+            em.close();
         }
     }
     

@@ -9,12 +9,18 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
+import br.ufrrj.acoes.repositories.AtividadeRepository;
+import br.ufrrj.acoes.repositories.jpa.AtividadeRepositoryJpa;
+
 @WebServlet("/acoes")
 public class AcoesController extends HttpServlet {
 
+    private AtividadeRepository atividadeRepository = new AtividadeRepositoryJpa();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("acoes.jsp");
-        dispatcher.forward(request, response);
+        request.setAttribute("acoes", atividadeRepository.list());
+        
+        request.getRequestDispatcher("acoes.jsp").forward(request, response);
     }
 }

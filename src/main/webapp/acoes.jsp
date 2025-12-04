@@ -20,8 +20,9 @@
                 <c:forEach var="acao" items="${acoes}">
                     <div class="card">
                         <h3>${acao.titulo}</h3>
-                        <p><strong>Responsável:</strong> ${acao.responsavel}</p>
-                        <p><strong>Período:</strong> ${acao.dataInicio} — ${acao.dataFim}</p>
+                        <p><strong>Responsável:</strong> ${acao.responsavel.nome}</p>
+                        <p><strong>Data de inicio:</strong> ${acao.inicio}</p>
+                        <p><strong>Local:</strong> ${acao.local}</p>
                         <p class="descricao-curta">${acao.descricao}</p>
 
                         <a href="acao?id=${acao.id}" 
