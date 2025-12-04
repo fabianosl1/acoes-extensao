@@ -1,26 +1,33 @@
 package br.ufrrj.acoes.models;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "atividade")
+@Table(name = "atividades")
 public class Atividade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
-    @Column
-    private String nome;
+    @Column(nullable = false)
+    private String titulo;
 
-    @Column(length = 3000)
+    @Column(nullable = false)
     private String descricao;
     
-    @Column
-    private LocalDateTime inicio;
+    @Column(nullable = false)
+    private String local;
+
+    @Column(nullable = false)
+    private LocalDate inicio;
+
+    @ManyToOne
+    private Responsavel responsavel;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "atividade_id")
@@ -37,12 +44,12 @@ public class Atividade {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getDescricao() {
@@ -53,12 +60,20 @@ public class Atividade {
         this.descricao = descricao;
     }
 
-    public LocalDateTime getInicio() {
+    public LocalDate getInicio() {
         return inicio;
     }
 
-    public void setInicio(LocalDateTime inicio) {
+    public void setInicio(LocalDate inicio) {
         this.inicio = inicio;
+    }
+
+    public Responsavel getResponsavel() {
+        return responsavel;
+    }
+
+    public void setResponsavel(Responsavel responsavel) {
+        this.responsavel = responsavel;
     }
 
     public List<RedeSocial> getRedesSociais() {
@@ -67,5 +82,13 @@ public class Atividade {
 
     public void setRedesSociais(List<RedeSocial> redesSociais) {
         this.redesSociais = redesSociais;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
     }
 }

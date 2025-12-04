@@ -13,7 +13,7 @@ public class RedeSocial {
     @Enumerated(EnumType.STRING)
     private RedeSocialEnum tipo;
     
-    @Column 
+    @Column(nullable = false)
     private String link;
 
     public RedeSocial() {}

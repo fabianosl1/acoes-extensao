@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "responsavel")
+@Table(name = "responsaveis")
 public class Responsavel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
-    @Column
+    @Column(nullable = false, unique = true)
     private String nome;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
