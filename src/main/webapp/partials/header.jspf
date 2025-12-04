@@ -21,7 +21,7 @@
                     <a href="login">Login</a>
                 </c:when>
                 <c:otherwise>
-                    <a href="acoes/cadastrar">Cadastrar Ação</a>
+                    <a href="cadastrar-acao">Cadastrar Ação</a>
                     <a href="logout">Sair</a>
                 </c:otherwise>
             </c:choose>

@@ -5,7 +5,7 @@
     <h1 class="title-page">Ações de Extensão</h1>
 
     <c:if test="${not empty sessionScope.admin}">
-        <a href="acoes/cadastrar" class="btn-primary">
+        <a href="cadastrar-acao" class="btn-primary">
             Cadastrar nova ação
         </a>
     </c:if>

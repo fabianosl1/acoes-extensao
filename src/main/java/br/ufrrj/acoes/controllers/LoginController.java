@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import br.ufrrj.acoes.models.Usuario;
 import br.ufrrj.acoes.repositories.UsuarioRepository;
-import br.ufrrj.acoes.repositories.hibernate.UsuarioRepositoryHibernate;
+import br.ufrrj.acoes.repositories.jpa.UsuarioRepositoryJpa;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/login")
 public class LoginController extends HttpServlet  {
     
-    private UsuarioRepository usuarioRepository = new UsuarioRepositoryHibernate();
+    private UsuarioRepository usuarioRepository = new UsuarioRepositoryJpa();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

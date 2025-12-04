@@ -1,4 +1,4 @@
-package br.ufrrj.acoes.repositories.hibernate;
+package br.ufrrj.acoes.repositories.jpa;
 
 
 import br.ufrrj.acoes.database.DatabaseManager;
@@ -6,7 +6,7 @@ import br.ufrrj.acoes.models.Usuario;
 import br.ufrrj.acoes.repositories.UsuarioRepository;
 import jakarta.persistence.EntityManager;
 
-public class UsuarioRepositoryHibernate implements UsuarioRepository {
+public class UsuarioRepositoryJpa implements UsuarioRepository {
 
     @Override
     public Usuario findByLogin(String login) {
