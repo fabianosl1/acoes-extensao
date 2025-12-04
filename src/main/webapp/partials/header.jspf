@@ -14,4 +14,15 @@
             <a href="acoes">Ações</a>
         </nav>
     </div>
+
+    <c:choose>
+    <c:when test="${empty sessionScope.admin}">
+        <a href="login.jsp">Login</a>
+    </c:when>
+    <c:otherwise>
+        <a href="admin/cadastrar-acao">Cadastrar Ação</a>
+        <a href="logout">Sair</a>
+    </c:otherwise>
+</c:choose>
+
 </header>
