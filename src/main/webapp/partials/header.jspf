@@ -10,8 +10,8 @@
     <div class="header-content">
         <h2 class="logo">Extensão UFRRJ</h2>
         <nav class="nav">
-            <a href="index.jsp">Início</a>
-            <a href="acoes">Ações</a>
+            <a href="/">Início</a>
+            <a href="/acoes">Ações</a>
         </nav>
     </div>
 
