@@ -10,23 +10,9 @@
         <p><strong>Descrição:</strong></p>
         <p>${acao.descricao}</p>
 
-        <p><strong>Responsável:</strong> ${acao.responsavel}</p>
+        <p><strong>Responsável:</strong> ${acao.responsavel.nome}</p>
         <p><strong>Local:</strong> ${acao.local}</p>
-        <p><strong>Público-alvo:</strong> ${acao.publicoAlvo}</p>
-        <p><strong>Contato:</strong> ${acao.contato}</p>
-
-        <p><strong>Período:</strong>
-            ${acao.dataInicio} → ${acao.dataFim}</p>
-
-        <p><strong>Status:</strong> ${acao.status}</p>
-
-        <c:if test="${acao.linkExterno != null}">
-            <p><a href="${acao.linkExterno}" target="_blank" class="btn-primary">Acessar página da ação</a></p>
-        </c:if>
-
-        <c:if test="${acao.taxaInscricao}">
-            <p><em>Esta ação possui taxa de inscrição.</em></p>
-        </c:if>
+        <p><strong>Inicio:</strong> ${acao.inicio}</p>
     </section>
 </main>
 

@@ -75,5 +75,23 @@ public class AtividadeRepositoryJpa implements AtividadeRepository {
             em.close();
         }
     }
+
+    @Override
+    public Atividade findById(Integer id) {
+        EntityManager em = DatabaseManager.getEntityManager();
+
+        try {
+            return em.createQuery(
+                "SELECT a FROM Atividade a where a.id = :id",
+                 Atividade.class
+            )
+            .setParameter("id", id)
+            .getSingleResult();
+        } catch (Exception ex) {
+            return null;
+        } finally {
+            em.close();
+        }
+    }
     
 }

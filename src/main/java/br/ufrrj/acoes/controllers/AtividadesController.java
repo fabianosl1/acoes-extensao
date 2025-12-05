@@ -1,6 +1,5 @@
 package br.ufrrj.acoes.controllers;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,7 +12,7 @@ import br.ufrrj.acoes.repositories.AtividadeRepository;
 import br.ufrrj.acoes.repositories.jpa.AtividadeRepositoryJpa;
 
 @WebServlet("/acoes")
-public class AcoesController extends HttpServlet {
+public class AtividadesController extends HttpServlet {
 
     private AtividadeRepository atividadeRepository = new AtividadeRepositoryJpa();
 
