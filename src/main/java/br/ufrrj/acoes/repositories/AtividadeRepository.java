@@ -8,5 +8,6 @@ public interface AtividadeRepository {
     void save(Atividade atividade);
     void save(Atividade atividade, String nomeResponsavel);
     List<Atividade> list();
+    List<Atividade> listLasts(Integer n);
     Atividade findById(Integer id);
 }

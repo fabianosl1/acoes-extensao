@@ -8,25 +8,20 @@
         <a href="acoes" class="btn-primary">Ver todas as ações</a>
     </section>
 
-    <section class="cards">
-        <h2>Destaques</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Exemplo 1</h3>
-                <p>Ações de alcance social e impacto na comunidade.</p>
+    <c:if test="${not empty acoes}">
+        <section class="cards">
+            <h2>Destaques</h2>
+            <div class="card-grid">
+                <c:forEach var="acao" items="${acoes}">
+                    <div class="card">
+                        <h3>${acao.titulo}</h3>
+                        <p>${acao.descricao}</p>
+                        <a href="acao?id=${acao.id}" class="btn-secondary">Ver detalhes</a>
+                    </div>
+                </c:forEach>
             </div>
-
-            <div class="card">
-                <h3>Exemplo 2</h3>
-                <p>Cursos abertos para toda a população.</p>
-            </div>
-
-            <div class="card">
-                <h3>Exemplo 3</h3>
-                <p>Projetos desenvolvidos por discentes e docentes.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </c:if>
 </main>
 
 <%@ include file="partials/footer.jspf" %>

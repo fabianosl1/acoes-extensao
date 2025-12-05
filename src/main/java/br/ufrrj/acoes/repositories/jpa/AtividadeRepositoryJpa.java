@@ -93,5 +93,20 @@ public class AtividadeRepositoryJpa implements AtividadeRepository {
             em.close();
         }
     }
-    
+
+    @Override
+    public List<Atividade> listLasts(Integer n) {
+        EntityManager em = DatabaseManager.getEntityManager();
+
+        try {
+            return em.createQuery(
+                "SELECT a FROM Atividade a ORDER BY id DESC", 
+                Atividade.class
+            )
+            .setMaxResults(n)
+            .getResultList();
+        } finally {
+            em.close();
+        }
+    }
 }

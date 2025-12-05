@@ -4,6 +4,9 @@ Sistema para cadastrar e visualizar ações de extensão da UFRRJ.
 
 Deploy: https://acoes-extensao.onrender.com/
 
+login: admin
+senha: admin
+
 ## Stack
 - Java 21
 - Hibernate
