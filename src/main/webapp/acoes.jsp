@@ -23,7 +23,7 @@
 
                         <p><strong>Responsável:</strong> ${acao.responsavel.nome}</p>
                         <p><strong>Local:</strong> ${acao.local}</p>
-                        <p><strong>Período:</strong> ${acao.inicio}</p>
+                        <p><strong>Início:</strong> ${acao.inicio}</p>
 
                         <p class="descricao-curta">${acao.descricao}</p>
 

@@ -82,7 +82,7 @@ public class AtividadeRepositoryJpa implements AtividadeRepository {
 
         try {
             return em.createQuery(
-                "SELECT a FROM Atividade a where a.id = :id",
+                "SELECT a FROM Atividade a LEFT JOIN FETCH a.redesSociais WHERE a.id = :id",
                  Atividade.class
             )
             .setParameter("id", id)

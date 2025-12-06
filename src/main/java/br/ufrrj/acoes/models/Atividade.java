@@ -31,7 +31,7 @@ public class Atividade {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "atividade_id")
-    private List<RedeSocial> redesSociais = new ArrayList<>();
+    private List<RedeSocial> redesSociais;
 
     @Column(name = "publico_alvo")
     private String publicoAlvo;

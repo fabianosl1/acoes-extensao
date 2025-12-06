@@ -176,8 +176,10 @@ body {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
     background: var(--cor-card);
-    padding: 25px;
+    padding: 14px;
     border-radius: 14px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
     margin-bottom: 40px;
@@ -192,7 +194,6 @@ form label {
 form input,
 form textarea,
 form select {
-    width: 100%;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
