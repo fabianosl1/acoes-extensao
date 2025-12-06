@@ -20,7 +20,7 @@ public class InicioController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Atividade> atividades = atividadeRepository.listLasts(3);
+        List<Atividade> atividades = atividadeRepository.listLasts(4);
         
         request.setAttribute("acoes", atividades);
 
