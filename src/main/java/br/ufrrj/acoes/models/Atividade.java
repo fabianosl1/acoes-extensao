@@ -33,6 +33,16 @@ public class Atividade {
     @JoinColumn(name = "atividade_id")
     private List<RedeSocial> redesSociais = new ArrayList<>();
 
+    @Column(name = "publico_alvo")
+    private String publicoAlvo;
+
+    public String getPublicoAlvo() {
+        return publicoAlvo;
+    }
+
+    public void setPublicoAlvo(String publicoAlvo) {
+        this.publicoAlvo = publicoAlvo;
+    }
 
     public Atividade() {}
 
